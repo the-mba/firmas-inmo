@@ -191,8 +191,8 @@ link_vimeo = {
 }
 
 link_pinterest = {
-  "Ibiza": "88",
-  "Madrid": "81" 
+  "Ibiza": "https://www.pinterest.es/ibizavende",
+  "Madrid": "https://www.pinterest.es/ibizavende" # TODO conseguir pinterest de madrid vende
 }
 
 Ecomensaje = {
