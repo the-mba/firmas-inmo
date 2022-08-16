@@ -162,32 +162,32 @@ link_instagram = {
 
 link_twitter = {
   "Ibiza": "https://twitter.com/ibizavende",
-  "Madrid": "https://twitter.com/ibizavende" 
+  "Madrid": "https://twitter.com/ibizavende" # TODO conseguir twitter de madrid vende
 }
 
 link_tumblr = {
   "Ibiza": "https://ibizavende.tumblr.com/",
-  "Madrid": "https://ibizavende.tumblr.com/" 
+  "Madrid": "https://ibizavende.tumblr.com/" # TODO conseguir tumblr de madrid vende
 }
 
 link_linkedin = {
   "Ibiza": "https://es.linkedin.com/company/ibiza-se-vende",
-  "Madrid": "https://es.linkedin.com/company/ibiza-se-vende" 
+  "Madrid": "https://es.linkedin.com/company/ibiza-se-vende" # TODO conseguir linkedin de madrid vende
 }
 
 link_youtube = {
   "Ibiza": "https://www.youtube.com/channel/UC72EbAx24raL6dArHs8B46g",
-  "Madrid": "https://www.youtube.com/channel/UC72EbAx24raL6dArHs8B46g" 
+  "Madrid": "https://www.youtube.com/channel/UC72EbAx24raL6dArHs8B46g" # TODO conseguir youtube de madrid vende
 }
 
 link_flickr = {
   "Ibiza": "https://www.flickr.com/photos/187956252@N05",
-  "Madrid": "https://www.flickr.com/photos/187956252@N05" 
+  "Madrid": "https://www.flickr.com/photos/187956252@N05" # TODO conseguir flickr de madrid vende
 }
 
 link_vimeo = {
   "Ibiza": "https://vimeo.com/ibizavende",
-  "Madrid": "https://vimeo.com/ibizavende" 
+  "Madrid": "https://vimeo.com/ibizavende" # TODO conseguir vimeo de madrid vende
 }
 
 link_pinterest = {
