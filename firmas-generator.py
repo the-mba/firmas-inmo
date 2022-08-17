@@ -1,4 +1,3 @@
-import encodings
 from pathlib import Path
 
 texto = """<div align="{align}">
@@ -13,9 +12,9 @@ texto = """<div align="{align}">
 	<a href="{link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 		<img src="http://media.ibizavende.com/fotos/firma_email/{nombre_foto}" alt="{alt_foto}" style="width: 120px; height: 120px;" width="120" height="120">
 	</a>
-	{abrir_comentario_html}<a href="{link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+	{abrir_comentario_html_logo}<a href="{link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 		<img src="https://media.ibizavende.com/fotos/firma_email/{nombre_logo}" alt="{alt_logo}" style="width: 120px; height: 120px;" width="120" height="120">
-	</a>{cerrar_comentario_html}
+	</a>{cerrar_comentario_html_logo}
 	<br>
 	<a href="mailto:{email}" target="_blank" rel="noopener noreferrer">
 		 {email}
@@ -33,7 +32,7 @@ texto = """<div align="{align}">
 			<img style="width: 32px; height: 32px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/WhatsApp_logo-color-vertical.svg" alt="WhatsApp Logo" width="32" height="32">
 		</a>
 		<span style="vertical-align: 11px;">
-			 M:&nbsp;+34&nbsp;{tel_1}&nbsp;{tel_2}&nbsp;{tel_3} Tf:&nbsp;+34&nbsp;{fijo_1}&nbsp;{fijo_2}&nbsp;{fijo_3}&nbsp;{fijo_4}
+			 M:&nbsp;+34&nbsp;{tel_1}&nbsp;{tel_2}&nbsp;{tel_3}{abrir_comentario_html_fijo} Tf:&nbsp;+34&nbsp;{fijo_1}&nbsp;{fijo_2}&nbsp;{fijo_3}&nbsp;{fijo_4}{cerrar_comentario_html_fijo}
 		</span>
 	</div>
 	<div style="margin-top: 7px;">
@@ -46,23 +45,11 @@ texto = """<div align="{align}">
 		<a href="{link_twitter}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/008-twitter.svg" alt="Twitter Logo" width="32" height="31">
 		</a>
-		<a href="{link_tumblr}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/009-tumblr.svg" alt="Tumblr Logo" width="32" height="31">
-		</a>
 		<a href="{link_linkedin}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/027-linkedin.svg" alt="LinkedIn Logo" width="32" height="31">
 		</a>
 		<a href="{link_youtube}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/001-youtube.svg" alt="YouTube Logo" width="32" height="31">
-		</a>
-		<a href="{link_flickr}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/035-flickr.svg" alt="Flickr Logo" width="32" height="31">
-		</a>
-		<a href="{link_vimeo}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/007-vimeo.svg" alt="Vimeo Logo" width="32" height="31">
-		</a>
-		<a href="{link_pinterest}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/021-pinterest.svg" alt="Pinterest Logo" width="32" height="31">
 		</a>
 		<br>
 		<div style="font-size: 10px; color: green; margin-top: 5px;">
@@ -97,7 +84,7 @@ opinión_google = {
 
 link_opinión_google = {
   "Ibiza": "https://g.page/Ibizavende/review?gm",
-  "Madrid": "https://g.page/Madridvende/review?gm" # TODO falta el link de madridvende
+  "Madrid": "https://g.page/r/CY5PYszSdskDEAI/review"
 }
 
 link = {
@@ -105,14 +92,14 @@ link = {
   "Madrid": "www.madridvende.com"
 }
 
-abrir_comentario_html = {
+abrir_comentario_html_logo = {
   "Mail": "",
   "Mobilia": "<!--"
 }
 
 nombre_logo = {
   "Ibiza": "firma_logo_ibiza.png",
-  "Madrid": "firma_logo_madrid.png" # TODO subir logo de Madrid en 240x240
+  "Madrid": "firma_logo_madrid.png"
 }
 
 alt_logo = {
@@ -120,7 +107,7 @@ alt_logo = {
   "Madrid": "MadridVende Logo"
 }
 
-cerrar_comentario_html = {
+cerrar_comentario_html_logo = {
   "Mail": "",
   "Mobilia": "-->"
 }
@@ -152,47 +139,27 @@ fijo_4 = {
 
 link_facebook = {
   "Ibiza": "http://www.facebook.com/ibizavende",
-  "Madrid": "http://www.facebook.com/ibizavende" # TODO conseguir facebook de madrid vende
+  "Madrid": "https://www.facebook.com/MadridVendeRealEstate"
 }
 
 link_instagram = {
   "Ibiza": "https://www.instagram.com/ibizavende",
-  "Madrid": "https://www.instagram.com/ibizavende" # TODO conseguir instagram de madrid vende
+  "Madrid": "https://www.instagram.com/madrid.vende"
 }
 
 link_twitter = {
   "Ibiza": "https://twitter.com/ibizavende",
-  "Madrid": "https://twitter.com/ibizavende" # TODO conseguir twitter de madrid vende
-}
-
-link_tumblr = {
-  "Ibiza": "https://ibizavende.tumblr.com/",
-  "Madrid": "https://ibizavende.tumblr.com/" # TODO conseguir tumblr de madrid vende
+  "Madrid": "https://twitter.com/MadridVende"
 }
 
 link_linkedin = {
-  "Ibiza": "https://es.linkedin.com/company/ibiza-se-vende",
-  "Madrid": "https://es.linkedin.com/company/ibiza-se-vende" # TODO conseguir linkedin de madrid vende
+  "Ibiza": "https://linkedin.com/company/ibiza-se-vende",
+  "Madrid": "https://linkedin.com/company/madrid-vende"
 }
 
 link_youtube = {
   "Ibiza": "https://www.youtube.com/channel/UC72EbAx24raL6dArHs8B46g",
-  "Madrid": "https://www.youtube.com/channel/UC72EbAx24raL6dArHs8B46g" # TODO conseguir youtube de madrid vende
-}
-
-link_flickr = {
-  "Ibiza": "https://www.flickr.com/photos/187956252@N05",
-  "Madrid": "https://www.flickr.com/photos/187956252@N05" # TODO conseguir flickr de madrid vende
-}
-
-link_vimeo = {
-  "Ibiza": "https://vimeo.com/ibizavende",
-  "Madrid": "https://vimeo.com/ibizavende" # TODO conseguir vimeo de madrid vende
-}
-
-link_pinterest = {
-  "Ibiza": "https://www.pinterest.es/ibizavende",
-  "Madrid": "https://www.pinterest.es/ibizavende" # TODO conseguir pinterest de madrid vende
+  "Madrid": "https://www.youtube.com/channel/UCEwHjWVPEGL80h73AQ98oRg"
 }
 
 Ecomensaje = {
@@ -227,6 +194,14 @@ personas = [
     "tel_1": "610",
     "tel_2": "544",
     "tel_3": "081",
+    "abrir_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": "<!--"
+    },
+    "cerrar_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": "-->"
+    }
   },
   {
     "nombre": "goya",
@@ -242,7 +217,15 @@ personas = [
     },
     "tel_1": "620",
     "tel_2": "634",
-    "tel_3": "981"
+    "tel_3": "981",
+    "abrir_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    },
+    "cerrar_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    }
   },
   {
     "nombre": "mario",
@@ -258,7 +241,15 @@ personas = [
     },
     "tel_1": "676",
     "tel_2": "861",
-    "tel_3": "730"
+    "tel_3": "730",
+    "abrir_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    },
+    "cerrar_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    }
   },
   {
     "nombre": "enrique",
@@ -274,7 +265,15 @@ personas = [
     },
     "tel_1": "649",
     "tel_2": "851",
-    "tel_3": "620"
+    "tel_3": "620",
+    "abrir_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    },
+    "cerrar_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    }
   },
   {
     "nombre": "lorena",
@@ -290,7 +289,15 @@ personas = [
     },
     "tel_1": "661",
     "tel_2": "424",
-    "tel_3": "850"
+    "tel_3": "850",
+    "abrir_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    },
+    "cerrar_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    }
   }
 ]
 idiomas = ["Español", "Inglés"]
@@ -312,16 +319,18 @@ for ciudad in ciudades:
           "link": link[ciudad],
           "nombre_foto": persona["nombre_foto"],
           "alt_foto": persona["alt_foto"][idioma],
-          "abrir_comentario_html": abrir_comentario_html[entorno],
+          "abrir_comentario_html_logo": abrir_comentario_html_logo[entorno],
           "nombre_logo": nombre_logo[ciudad],
           "alt_logo": alt_logo[ciudad],
-          "cerrar_comentario_html": cerrar_comentario_html[entorno],
+          "cerrar_comentario_html_logo": cerrar_comentario_html_logo[entorno],
           "email": persona["email"][ciudad],
           "como_llegar": como_llegar[idioma],
           "ciudad": ciudad,
           "tel_1": persona["tel_1"],
           "tel_2": persona["tel_2"],
           "tel_3": persona["tel_3"],
+          "abrir_comentario_html_fijo": persona["abrir_comentario_html_fijo"][ciudad],
+          "cerrar_comentario_html_fijo": persona["cerrar_comentario_html_fijo"][ciudad],
           "fijo_1": fijo_1[ciudad],
           "fijo_2": fijo_2[ciudad],
           "fijo_3": fijo_3[ciudad],
@@ -329,12 +338,8 @@ for ciudad in ciudades:
           "link_facebook": link_facebook[ciudad],
           "link_instagram": link_instagram[ciudad],
           "link_twitter": link_twitter[ciudad],
-          "link_tumblr": link_tumblr[ciudad],
           "link_linkedin": link_linkedin[ciudad],
           "link_youtube": link_youtube[ciudad],
-          "link_flickr": link_flickr[ciudad],
-          "link_vimeo": link_vimeo[ciudad],
-          "link_pinterest": link_pinterest[ciudad],
           "Ecomensaje": Ecomensaje[idioma],
           "confidencial": confidencial[idioma],
           "lopd": lopd[idioma]
