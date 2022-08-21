@@ -5,7 +5,7 @@ texto = """<div align="{align}">
 	<br>
 	{Persona_y_título}
   <br>
-	<span style="vertical-align: 12px;">{opinión_google}</span>
+	<span style="vertical-align: {vertical_align}px;">{opinión_google}</span>
 	<a href="{link_opinión_google}" target="_blank" rel="noopener noreferrer">
 		 <img style="width: 32px; height: 32px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/logo_google_32x32.png" alt="Google Logo" width="32" height="32"/></a>
 	<br>
@@ -31,7 +31,7 @@ texto = """<div align="{align}">
 		<a href="https://wa.me/0034610544081/?text=Hola%2C%20{ciudad}Vende!" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 			<img style="width: 32px; height: 32px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/WhatsApp_logo-color-vertical.svg" alt="WhatsApp Logo" width="32" height="32">
 		</a>
-		<span style="vertical-align: 11px;">
+		<span style="vertical-align: {vertical_align}px;">
 			&nbsp;&nbsp;&nbsp; M:&nbsp;+34&nbsp;{tel_1}&nbsp;{tel_2}&nbsp;{tel_3}{abrir_comentario_html_fijo}&nbsp;&nbsp;&nbsp; Tf:&nbsp;+34&nbsp;{fijo_1}&nbsp;{fijo_2}&nbsp;{fijo_3}&nbsp;{fijo_4}{cerrar_comentario_html_fijo}
 		</span>
 	</div>
@@ -75,6 +75,11 @@ align = {
 Saludo = {
   "Español": "Muchas gracias, un saludo desde Ibiza.",
   "Inglés": "Kind regards, greetings from Ibiza."
+}
+
+vertical_align = {
+  "Mail": "12",
+  "Mobilia": "0"
 }
 
 opinión_google = {
@@ -314,6 +319,7 @@ for ciudad in ciudades:
           "align": align[entorno],
           "Saludo": Saludo[idioma],
           "Persona_y_título": persona["Persona_y_título"],
+          "vertical_align": vertical_align[entorno],
           "opinión_google": opinión_google[idioma],
           "link_opinión_google": link_opinión_google[ciudad],
           "link": link[ciudad],
