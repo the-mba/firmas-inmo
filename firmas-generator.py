@@ -4,10 +4,10 @@ texto = """<div align="{align}">
 	{Saludo}
 	<br>
 	{Persona_y_título}
-	<br>
-	{opinión_google}
+  <br>
+	<span style="vertical-align: 12px;">{opinión_google}</span>
 	<a href="{link_opinión_google}" target="_blank" rel="noopener noreferrer">
-		 Google</a>.
+		 <img style="width: 32px; height: 32px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/logo_google_32x32.png" alt="Google Logo" width="32" height="32"/></a>
 	<br>
 	<a href="{link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 		<img src="http://media.ibizavende.com/fotos/firma_email/{nombre_foto}" alt="{alt_foto}" style="width: 120px; height: 120px;" width="120" height="120">
@@ -32,25 +32,25 @@ texto = """<div align="{align}">
 			<img style="width: 32px; height: 32px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/WhatsApp_logo-color-vertical.svg" alt="WhatsApp Logo" width="32" height="32">
 		</a>
 		<span style="vertical-align: 11px;">
-			 M:&nbsp;+34&nbsp;{tel_1}&nbsp;{tel_2}&nbsp;{tel_3}{abrir_comentario_html_fijo} Tf:&nbsp;+34&nbsp;{fijo_1}&nbsp;{fijo_2}&nbsp;{fijo_3}&nbsp;{fijo_4}{cerrar_comentario_html_fijo}
+			&nbsp;&nbsp;&nbsp; M:&nbsp;+34&nbsp;{tel_1}&nbsp;{tel_2}&nbsp;{tel_3}{abrir_comentario_html_fijo}&nbsp;&nbsp;&nbsp; Tf:&nbsp;+34&nbsp;{fijo_1}&nbsp;{fijo_2}&nbsp;{fijo_3}&nbsp;{fijo_4}{cerrar_comentario_html_fijo}
 		</span>
 	</div>
 	<div style="margin-top: 7px;">
 		<a href="{link_facebook}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/036-facebook.svg" alt="Facebook Logo" width="32" height="31">
-		</a>
+		</a>&nbsp;&nbsp;&nbsp;
 		<a href="{link_instagram}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/029-instagram.svg" alt="Instagram Logo" width="32" height="31">
-		</a>
+		</a>&nbsp;&nbsp;&nbsp;
 		<a href="{link_twitter}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/008-twitter.svg" alt="Twitter Logo" width="32" height="31">
-		</a>
+		</a>&nbsp;&nbsp;&nbsp;
 		<a href="{link_linkedin}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/027-linkedin.svg" alt="LinkedIn Logo" width="32" height="31">
-		</a>
+		</a>&nbsp;&nbsp;&nbsp;
 		<a href="{link_youtube}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
 			<img style="width: 32px; height: 31px;" src="http://media.ibizavende.com/fotos/firma_email/redes_sociales/001-youtube.svg" alt="YouTube Logo" width="32" height="31">
-		</a>
+		</a>&nbsp;&nbsp;&nbsp;
 		<br>
 		<div style="font-size: 10px; color: green; margin-top: 5px;">
 			{Ecomensaje}
