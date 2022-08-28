@@ -177,8 +177,13 @@ confidencial = {
 }
 
 lopd = {
-  "Español": "En cumplimiento con lo dispuesto en la LOPD 15/99 le informamos que sus datos han sido incluidos en nuestro fichero de base de datos,con el fin de hacer efectiva la comunicación entre ambas partes. Si lo desea puede ejercer su derecho de ACCESO, RECTIFICACIÓN, CANCELACIÓN Y OPOSICION comunicándolo a través del mail: info@ibizavende.com.",
-  "Inglés": "According to the current legislation (LOPD 15/99), we inform you that the information regarding your company has been included in our database in order to make communications between us efficient. If you wish so, you have the right to access, modify, cancel or refuse via e-mail to info@ibizavende.com."
+  "Español": "En cumplimiento con lo dispuesto en la LOPD 15/99 le informamos que sus datos han sido incluidos en nuestro fichero de base de datos,con el fin de hacer efectiva la comunicación entre ambas partes. Si lo desea puede ejercer su derecho de ACCESO, RECTIFICACIÓN, CANCELACIÓN Y OPOSICION comunicándolo a través del mail: {email_arco}.",
+  "Inglés": "According to the current legislation (LOPD 15/99), we inform you that the information regarding your company has been included in our database in order to make communications between us efficient. If you wish so, you have the right to access, modify, cancel or refuse via e-mail to {email_arco}."
+}
+
+email_arco = {
+  "Ibiza": "info@ibizavende.com",
+  "Madrid": "info@madridvende.com"
 }
 
 ciudades = ["Ibiza", "Madrid"]
@@ -371,7 +376,7 @@ for ciudad in ciudades:
           "link_youtube": link_youtube[ciudad],
           "Ecomensaje": Ecomensaje[idioma],
           "confidencial": confidencial[idioma],
-          "lopd": lopd[idioma]
+          "lopd": lopd[idioma].format(email_arco = email_arco[ciudad])
         }
         texto_formateado = texto.format(**keys)
         output_file = Path(filepath + filename)
