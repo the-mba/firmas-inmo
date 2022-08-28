@@ -17,8 +17,7 @@ texto = """<div align="{align}">
 	</a>{cerrar_comentario_html_logo}
 	<br>
 	<a href="mailto:{email}" target="_blank" rel="noopener noreferrer">
-		 {email}
-	</a>
+		 {email}</a>
 	<a href="{link}" target="_blank" rel="noopener noreferrer">
 		 {link}
 	</a>
@@ -187,7 +186,7 @@ personas = [
   {
     "nombre": "carol",
     "Persona_y_título": "Carolina Azcona, CEO & Founder.",
-    "nombre_foto": "firma_carol_v2.jpg",
+    "nombre_foto": "firma_carol_v2.png",
     "alt_foto": {
       "Español": "Foto retrato de Carolina Azcona",
       "Inglés": "Photo portrait of Carolina Azcona"
@@ -211,7 +210,7 @@ personas = [
   {
     "nombre": "goya",
     "Persona_y_título": "Goya Balbuena, CMO & CCO.",
-    "nombre_foto": "firma_goya_v2.jpg",
+    "nombre_foto": "firma_goya.jpg",
     "alt_foto": {
       "Español": "Foto retrato de Goya Balbuena",
       "Inglés": "Photo portrait of Goya Balbuena"
@@ -295,6 +294,30 @@ personas = [
     "tel_1": "661",
     "tel_2": "424",
     "tel_3": "850",
+    "abrir_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    },
+    "cerrar_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    }
+  },
+  {
+    "nombre": "clara",
+    "Persona_y_título": "María Clara Torres, Sales and Rentals",
+    "nombre_foto": "firma_clara.jpg",
+    "alt_foto": {
+      "Español": "Foto retrato de María Clara Torres",
+      "Inglés": "Photo portrait of María Clara Torres"
+    },
+    "email": {
+      "Ibiza": "mariaclara@ibizavende.com",
+      "Madrid": "mariaclara@madridvende.com"
+    },
+    "tel_1": "695",
+    "tel_2": "364",
+    "tel_3": "572",
     "abrir_comentario_html_fijo": {
       "Ibiza": "",
       "Madrid": ""
