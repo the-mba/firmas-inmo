@@ -72,8 +72,8 @@ align = {
 }
 
 Saludo = {
-  "Español": "Muchas gracias, un saludo desde Ibiza.",
-  "Inglés": "Kind regards, greetings from Ibiza."
+  "Español": "Muchas gracias, un saludo desde {ciudad}.",
+  "Inglés": "Kind regards, greetings from {ciudad}."
 }
 
 vertical_align = {
@@ -340,7 +340,7 @@ for ciudad in ciudades:
         filename = "_".join(["firma", ciudad.lower(), persona["nombre"], entorno.lower(), idioma.lower()]) + ".html"
         keys = {
           "align": align[entorno],
-          "Saludo": Saludo[idioma],
+          "Saludo": Saludo[idioma].format(ciudad = ciudad),
           "Persona_y_título": persona["Persona_y_título"],
           "vertical_align": vertical_align[entorno],
           "opinión_google": opinión_google[idioma],
