@@ -13,7 +13,7 @@ texto = """<div align="{align}">
 		<img src="http://media.ibizavende.com/fotos/firma_email/{nombre_foto}" alt="{alt_foto}" style="width: 120px; height: 120px;" width="120" height="120">
 	</a>
 	{abrir_comentario_html_logo}<a href="{link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-		<img src="https://media.ibizavende.com/fotos/firma_email/{nombre_logo}" alt="{alt_logo}" style="width: 120px; height: 120px;" width="120" height="120">
+		<img src="http://media.ibizavende.com/fotos/firma_email/{nombre_logo}" alt="{alt_logo}" style="width: 120px; height: 120px;" width="120" height="120">
 	</a>{cerrar_comentario_html_logo}
 	<br>
 	<a href="mailto:{email}" target="_blank" rel="noopener noreferrer">
