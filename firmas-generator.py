@@ -286,7 +286,7 @@ personas = [
   },
   {
     "nombre": "lorena",
-    "Persona_y_título": "Lorena Dierking, Sales and Rentals",
+    "Persona_y_título": "Lorena Dierking, Sales Manager",
     "nombre_foto": "firma_lorena.jpg",
     "alt_foto": {
       "Español": "Foto retrato de Lorena Dierking",
