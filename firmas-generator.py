@@ -215,7 +215,7 @@ personas = [
   {
     "nombre": "goya",
     "Persona_y_título": "Goya Balbuena, CMO & CCO.",
-    "nombre_foto": "firma_goya.jpg",
+    "nombre_foto": "firma_goya_v2.png",
     "alt_foto": {
       "Español": "Foto retrato de Goya Balbuena",
       "Inglés": "Photo portrait of Goya Balbuena"
