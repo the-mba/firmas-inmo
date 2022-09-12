@@ -296,9 +296,9 @@ personas = [
       "Ibiza": "lorena@ibizavende.com",
       "Madrid": "lorena@madridvende.com"
     },
-    "tel_1": "661",
-    "tel_2": "424",
-    "tel_3": "850",
+    "tel_1": "679",
+    "tel_2": "757",
+    "tel_3": "684",
     "abrir_comentario_html_fijo": {
       "Ibiza": "",
       "Madrid": ""
