@@ -22,9 +22,7 @@ texto = """<div align="{align}">
 		 {link}
 	</a>
 	<br>
-	 Inmobiliaria Plaza de Villa 6, 1º, 07800 Ibiza
-	<br>
-	 ({como_llegar}, Dalt Vila)
+    {dirección}
 	<br>
 	<div style="margin-top:5px">
 		<a href="https://wa.me/0034610544081/?text=Hola%2C%20{ciudad}Vende!" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
@@ -116,9 +114,19 @@ cerrar_comentario_html_logo = {
   "Mobilia": "-->"
 }
 
-como_llegar = {
-  "Español": "al lado del museo de Arte Contemporáneo",
-  "Inglés": "beside the Museum of Contemporary Art"
+dirección = {
+  "Ibiza": {
+    "Español": """Inmobiliaria Plaza de Villa 6, 1º, 07800 Ibiza
+	<br>
+	  (al lado del museo de Arte Contemporáneo, Dalt Vila)""",
+    "Inglés": """Inmobiliaria Plaza de Villa 6, 1º, 07800 Ibiza
+	<br>
+	  (beside the Museum of Contemporary Art, Dalt Vila)"""
+  },
+  "Madrid": {
+    "Español": "Augusto Figueroa, 17, 28004, Madrid",
+    "Inglés": "Augusto Figueroa, 17, 28004, Madrid"
+  }
 }
 
 fijo_1 = {
@@ -358,7 +366,7 @@ for ciudad in ciudades:
           "alt_logo": alt_logo[ciudad],
           "cerrar_comentario_html_logo": cerrar_comentario_html_logo[entorno],
           "email": persona["email"][ciudad],
-          "como_llegar": como_llegar[idioma],
+          "dirección": dirección[ciudad][idioma],
           "ciudad": ciudad,
           "tel_1": persona["tel_1"],
           "tel_2": persona["tel_2"],
