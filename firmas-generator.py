@@ -270,7 +270,7 @@ personas = [
   },
   {
     "nombre": "enrique",
-    "Persona_y_título": "Enrique Balbuena, Architect.",
+    "Persona_y_título": "Enrique Balbuena, Architect",
     "nombre_foto": "firma_enrique.jpg",
     "alt_foto": {
       "Español": "Foto retrato de Enrique Balbuena",
@@ -331,6 +331,54 @@ personas = [
     "tel_1": "695",
     "tel_2": "364",
     "tel_3": "572",
+    "abrir_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    },
+    "cerrar_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    }
+  },
+  {
+    "nombre": "itziar",
+    "Persona_y_título": "Itziar Chávarri Sainz, Sales",
+    "nombre_foto": "firma_itziar.jpg",
+    "alt_foto": {
+      "Español": "Foto retrato de Itziar Chávarri Sainz",
+      "Inglés": "Photo portrait of Itziar Chávarri Sainz"
+    },
+    "email": {
+      "Ibiza": "itziar@ibizavende.com",
+      "Madrid": "itziar@madridvende.com"
+    },
+    "tel_1": "630",
+    "tel_2": "006",
+    "tel_3": "982",
+    "abrir_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    },
+    "cerrar_comentario_html_fijo": {
+      "Ibiza": "",
+      "Madrid": ""
+    }
+  },
+  {
+    "nombre": "joaquin",
+    "Persona_y_título": "Joaquín Marí Marrodan, Sales and Rentals",
+    "nombre_foto": "firma_joaquin.jpg",
+    "alt_foto": {
+      "Español": "Foto retrato de Joaquín Marí Marrodan",
+      "Inglés": "Photo portrait of Joaquín Marí Marrodan"
+    },
+    "email": {
+      "Ibiza": "jmari@ibizavende.com",
+      "Madrid": "jmari@madridvende.com"
+    },
+    "tel_1": "639",
+    "tel_2": "505",
+    "tel_3": "212",
     "abrir_comentario_html_fijo": {
       "Ibiza": "",
       "Madrid": ""
