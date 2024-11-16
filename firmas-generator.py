@@ -312,6 +312,25 @@ personas = [
         "abrir_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
+    {
+        "nombre": "cristina",
+        "Persona_y_título": "Cristina Santos, Sales and Rentals",
+        "nombre_foto": "firma_cristina.jpg",
+        "alt_foto": {
+            "Español": "Foto retrato de Cristina Santos",
+            "Inglés": "Photo portrait of Cristina Santos",
+        },
+        "email": {
+            "Ibiza": "cristina@ibizavende.com",
+            "Madrid": "cristina@madridvende.com",
+        },
+        "tel_1": "682",
+        "tel_2": "531",
+        "tel_3": "188",
+        "logo_whatsapp_con_link": True,
+        "abrir_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
+        "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
+    },
 ]
 idiomas = ["Español", "Inglés"]
 entornos = ["Mail", "Mobilia"]
@@ -354,8 +373,12 @@ for ciudad in ciudades:
                     "tel_1": persona["tel_1"],
                     "tel_2": persona["tel_2"],
                     "tel_3": persona["tel_3"],
-                    "quitar_link_logo_whatsapp__abrir": "" if persona["logo_whatsapp_con_link"] else "<!--",
-                    "quitar_link_logo_whatsapp__cerrar": "" if persona["logo_whatsapp_con_link"] else "-->",
+                    "quitar_link_logo_whatsapp__abrir": (
+                        "" if persona["logo_whatsapp_con_link"] else "<!--"
+                    ),
+                    "quitar_link_logo_whatsapp__cerrar": (
+                        "" if persona["logo_whatsapp_con_link"] else "-->"
+                    ),
                     "abrir_comentario_html_fijo": persona["abrir_comentario_html_fijo"][
                         ciudad
                     ],
