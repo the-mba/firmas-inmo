@@ -13,7 +13,7 @@ texto = """<div align="{align}">
 		<img src="http://media.ibizavende.com/fotos/firma_email/{nombre_foto}" alt="{alt_foto}" style="width: 120px; height: 120px;" width="120" height="120">
 	</a>
 	{abrir_comentario_html_logo}<a href="{link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
-		<img src="http://media.ibizavende.com/fotos/firma_email/{nombre_logo}" alt="{alt_logo}" style="width: 120px; height: 120px;" width="120" height="120">
+		<img src="http://media.ibizavende.com/fotos/firma_email/{nombre_logo}" alt="{alt_logo}" style="width: {ancho_logo}px; height: 120px;" width="{ancho_logo}" height="120">
 	</a>{cerrar_comentario_html_logo}
 	<br>
 	<a href="mailto:{email}" target="_blank" rel="noopener noreferrer">
@@ -90,6 +90,8 @@ abrir_comentario_html_logo = {"Mail": "", "Mobilia": "<!--"}
 nombre_logo = {"Ibiza": "firma_logo_ibiza_v2.png", "Madrid": "firma_logo_madrid.png"}
 
 alt_logo = {"Ibiza": "IbizaVende Logo", "Madrid": "MadridVende Logo"}
+
+ancho_logo = {"Ibiza": "135", "Madrid": "120"}
 
 cerrar_comentario_html_logo = {"Mail": "", "Mobilia": "-->"}
 
@@ -245,7 +247,7 @@ personas = [
     {
         "nombre": "clara",
         "Persona_y_título": "Clara de la Fuente, Sales and Rentals",
-        "nombre_foto": "firma_clara_2.jpg",
+        "nombre_foto": "firma_clara.png",
         "alt_foto": {
             "Español": "Foto retrato de Clara de la Fuente",
             "Inglés": "Photo portrait of Clara de la Fuente",
@@ -264,7 +266,7 @@ personas = [
     {
         "nombre": "lara",
         "Persona_y_título": "Lara Slanzi, Sales and Rentals",
-        "nombre_foto": "firma_lara.jpg",
+        "nombre_foto": "firma_lara.png",
         "alt_foto": {
             "Español": "Foto retrato de Lara Slanzi",
             "Inglés": "Photo portrait of Lara Slanzi",
@@ -331,6 +333,25 @@ personas = [
         "abrir_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
+    {
+        "nombre": "valentin",
+        "Persona_y_título": "Valentin Limousin, Junior Sales and Rentals",
+        "nombre_foto": "firma_valentin.jpg",
+        "alt_foto": {
+            "Español": "Foto retrato de Valentin Limousin",
+            "Inglés": "Photo portrait of Valentin Limousin",
+        },
+        "email": {
+            "Ibiza": "valentin@ibizavende.com",
+            "Madrid": "valentin@madridvende.com",
+        },
+        "tel_1": "660",
+        "tel_2": "131",
+        "tel_3": "164",
+        "logo_whatsapp_con_link": True,
+        "abrir_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
+        "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
+    },
 ]
 idiomas = ["Español", "Inglés"]
 entornos = ["Mail", "Mobilia"]
@@ -366,6 +387,7 @@ for ciudad in ciudades:
                     "abrir_comentario_html_logo": abrir_comentario_html_logo[entorno],
                     "nombre_logo": nombre_logo[ciudad],
                     "alt_logo": alt_logo[ciudad],
+                    "ancho_logo": ancho_logo[ciudad],
                     "cerrar_comentario_html_logo": cerrar_comentario_html_logo[entorno],
                     "email": persona["email"][ciudad],
                     "dirección": dirección[ciudad][idioma],
