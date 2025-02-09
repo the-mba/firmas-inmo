@@ -87,7 +87,7 @@ link = {"Ibiza": "www.ibizavende.com", "Madrid": "www.madridvende.com"}
 
 abrir_comentario_html_logo = {"Mail": "", "Mobilia": "<!--"}
 
-nombre_logo = {"Ibiza": "firma_logo_ibiza.png", "Madrid": "firma_logo_madrid.png"}
+nombre_logo = {"Ibiza": "firma_logo_ibiza_v2.png", "Madrid": "firma_logo_madrid.png"}
 
 alt_logo = {"Ibiza": "IbizaVende Logo", "Madrid": "MadridVende Logo"}
 
