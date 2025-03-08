@@ -1,4 +1,5 @@
 from pathlib import Path
+from enviar_firmas_por_email import enviar_email_a
 
 texto = """<div align="{align}">
 	{Saludo}
@@ -67,15 +68,15 @@ texto = """<div align="{align}">
 align = {"Mail": "left", "Mobilia": "center"}
 
 Saludo = {
-    "Español": "Muchas gracias, un saludo desde {ciudad}.",
-    "Inglés": "Kind regards, greetings from {ciudad}.",
+    "Spanish": "Muchas gracias, un saludo desde {ciudad}.",
+    "English": "Kind regards, greetings from {ciudad}.",
 }
 
 vertical_align = {"Mail": "12", "Mobilia": "0"}
 
 opinión_google = {
-    "Español": "Gracias por dejarnos tu opinión en",
-    "Inglés": "We would appreciate your feedback on",
+    "Spanish": "Gracias por dejarnos tu opinión en",
+    "English": "We would appreciate your feedback on",
 }
 
 link_opinión_google = {
@@ -97,12 +98,12 @@ cerrar_comentario_html_logo = {"Mail": "", "Mobilia": "-->"}
 
 dirección = {
     "Ibiza": {
-        "Español": """Calle Pere de Portugal 5, 07800 Ibiza.""",
-        "Inglés": """Calle Pere de Portugal 5, 07800 Ibiza.""",
+        "Spanish": """Calle Pere de Portugal 5, 07800 Ibiza.""",
+        "English": """Calle Pere de Portugal 5, 07800 Ibiza.""",
     },
     "Madrid": {
-        "Español": "Augusto Figueroa, 17, 28004, Madrid",
-        "Inglés": "Augusto Figueroa, 17, 28004, Madrid",
+        "Spanish": "Augusto Figueroa, 17, 28004, Madrid",
+        "English": "Augusto Figueroa, 17, 28004, Madrid",
     },
 }
 
@@ -143,18 +144,18 @@ link_youtube = {
 }
 
 Ecomensaje = {
-    "Español": "Antes de imprimir este mensaje, asegúrate de que es necesario. El medio ambiente está en nuestra mano.",
-    "Inglés": "Please consider the environment before printing this email.",
+    "Spanish": "Antes de imprimir este mensaje, asegúrate de que es necesario. El medio ambiente está en nuestra mano.",
+    "English": "Please consider the environment before printing this email.",
 }
 
 confidencial = {
-    "Español": "La información incluida en el presente correo electrónico es SECRETO PROFESIONAL Y CONFIDENCIAL, siendo para el uso exclusivo del destinatario arriba mencionado. Si usted no es el destinatario señalado o ha recibido esta comunicación por error, le informamos que está totalmente prohibida cualquier divulgación, distribución o reproducción de esta comunicación, le rogamos que nos lo notifique inmediatamente y nos devuelva el mensaje original a la dirección arriba mencionada. Gracias.",
-    "Inglés": "The information contained in this e-mail is LEGALLY PRIVILEDGED AND CONFIDENTIAL and is intended only for the use of the addressee named above. If the reader of this message is not the intended recipient or have received this communication in error, please be aware that any dissemination, distribution or duplication of this communication is strictly prohibited, and please notify us immediately and return the original message. Thank you.",
+    "Spanish": "La información incluida en el presente correo electrónico es SECRETO PROFESIONAL Y CONFIDENCIAL, siendo para el uso exclusivo del destinatario arriba mencionado. Si usted no es el destinatario señalado o ha recibido esta comunicación por error, le informamos que está totalmente prohibida cualquier divulgación, distribución o reproducción de esta comunicación, le rogamos que nos lo notifique inmediatamente y nos devuelva el mensaje original a la dirección arriba mencionada. Gracias.",
+    "English": "The information contained in this e-mail is LEGALLY PRIVILEDGED AND CONFIDENTIAL and is intended only for the use of the addressee named above. If the reader of this message is not the intended recipient or have received this communication in error, please be aware that any dissemination, distribution or duplication of this communication is strictly prohibited, and please notify us immediately and return the original message. Thank you.",
 }
 
 lopd = {
-    "Español": "En cumplimiento con lo dispuesto en la LOPD 15/99 le informamos que sus datos han sido incluidos en nuestro fichero de base de datos,con el fin de hacer efectiva la comunicación entre ambas partes. Si lo desea puede ejercer su derecho de ACCESO, RECTIFICACIÓN, CANCELACIÓN Y OPOSICION comunicándolo a través del mail: {email_arco}.",
-    "Inglés": "According to the current legislation (LOPD 15/99), we inform you that the information regarding your company has been included in our database in order to make communications between us efficient. If you wish so, you have the right to access, modify, cancel or refuse via e-mail to {email_arco}.",
+    "Spanish": "En cumplimiento con lo dispuesto en la LOPD 15/99 le informamos que sus datos han sido incluidos en nuestro fichero de base de datos,con el fin de hacer efectiva la comunicación entre ambas partes. Si lo desea puede ejercer su derecho de ACCESO, RECTIFICACIÓN, CANCELACIÓN Y OPOSICION comunicándolo a través del mail: {email_arco}.",
+    "English": "According to the current legislation (LOPD 15/99), we inform you that the information regarding your company has been included in our database in order to make communications between us efficient. If you wish so, you have the right to access, modify, cancel or refuse via e-mail to {email_arco}.",
 }
 
 email_arco = {"Ibiza": "info@ibizavende.com", "Madrid": "info@madridvende.com"}
@@ -162,12 +163,13 @@ email_arco = {"Ibiza": "info@ibizavende.com", "Madrid": "info@madridvende.com"}
 ciudades = ["Ibiza", "Madrid"]
 personas = [
     {
-        "nombre": "carol",
+        "nombre": "Carol",
         "Persona_y_título": "Carolina Azcona, CEO & Founder.",
-        "nombre_foto": "firma_carol_v2.png",
+        "sedes": ["Ibiza", "Madrid"],
+        "nombre_foto": "firma_carol_v3.png",
         "alt_foto": {
-            "Español": "Foto retrato de Carolina Azcona",
-            "Inglés": "Photo portrait of Carolina Azcona",
+            "Spanish": "Foto retrato de Carolina Azcona",
+            "English": "Photo portrait of Carolina Azcona",
         },
         "email": {"Ibiza": "info@ibizavende.com", "Madrid": "info@madridvende.com"},
         "tel_1": "610",
@@ -178,12 +180,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": "-->"},
     },
     {
-        "nombre": "goya",
+        "nombre": "Goya",
         "Persona_y_título": "Goya Balbuena, CMO & CCO.",
-        "nombre_foto": "firma_goya_v2.png",
+        "sedes": ["Ibiza", "Madrid"],
+        "nombre_foto": "firma_goya_v3.png",
         "alt_foto": {
-            "Español": "Foto retrato de Goya Balbuena",
-            "Inglés": "Photo portrait of Goya Balbuena",
+            "Spanish": "Foto retrato de Goya Balbuena",
+            "English": "Photo portrait of Goya Balbuena",
         },
         "email": {"Ibiza": "goya@ibizavende.com", "Madrid": "goya@madridvende.com"},
         "tel_1": "620",
@@ -194,12 +197,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
     {
-        "nombre": "mario",
+        "nombre": "Mario",
         "Persona_y_título": "Mario Balbuena, CTO & CIO.",
+        "sedes": ["Ibiza", "Madrid"],
         "nombre_foto": "firma_mario.jpg",
         "alt_foto": {
-            "Español": "Foto retrato de Mario Balbuena",
-            "Inglés": "Photo portrait of Mario Balbuena",
+            "Spanish": "Foto retrato de Mario Balbuena",
+            "English": "Photo portrait of Mario Balbuena",
         },
         "email": {"Ibiza": "mario@ibizavende.com", "Madrid": "mario@madridvende.com"},
         "tel_1": "676",
@@ -210,12 +214,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
     {
-        "nombre": "enrique",
+        "nombre": "Enrique",
         "Persona_y_título": "Enrique Balbuena, Architect",
+        "sedes": ["Ibiza"],
         "nombre_foto": "firma_enrique.jpg",
         "alt_foto": {
-            "Español": "Foto retrato de Enrique Balbuena",
-            "Inglés": "Photo portrait of Enrique Balbuena",
+            "Spanish": "Foto retrato de Enrique Balbuena",
+            "English": "Photo portrait of Enrique Balbuena",
         },
         "email": {
             "Ibiza": "enrique@ibizavende.com",
@@ -229,12 +234,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
     {
-        "nombre": "lorena",
+        "nombre": "Lorena",
         "Persona_y_título": "Lorena Dierking, Senior Sales and Rentals Manager",
-        "nombre_foto": "firma_lorena.jpg",
+        "sedes": ["Ibiza"],
+        "nombre_foto": "firma_lorena_v3.png",
         "alt_foto": {
-            "Español": "Foto retrato de Lorena Dierking",
-            "Inglés": "Photo portrait of Lorena Dierking",
+            "Spanish": "Foto retrato de Lorena Dierking",
+            "English": "Photo portrait of Lorena Dierking",
         },
         "email": {"Ibiza": "lorena@ibizavende.com", "Madrid": "lorena@madridvende.com"},
         "tel_1": "679",
@@ -245,12 +251,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
     {
-        "nombre": "clara",
+        "nombre": "Clara",
         "Persona_y_título": "Clara de la Fuente, Sales and Rentals",
-        "nombre_foto": "firma_clara.png",
+        "sedes": ["Ibiza"],
+        "nombre_foto": "firma_clara_v3.png",
         "alt_foto": {
-            "Español": "Foto retrato de Clara de la Fuente",
-            "Inglés": "Photo portrait of Clara de la Fuente",
+            "Spanish": "Foto retrato de Clara de la Fuente",
+            "English": "Photo portrait of Clara de la Fuente",
         },
         "email": {
             "Ibiza": "clara@ibizavende.com",
@@ -264,12 +271,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
     {
-        "nombre": "lara",
+        "nombre": "Lara",
         "Persona_y_título": "Lara Slanzi, Sales and Rentals",
-        "nombre_foto": "firma_lara.png",
+        "sedes": ["Ibiza"],
+        "nombre_foto": "firma_lara_v3.png",
         "alt_foto": {
-            "Español": "Foto retrato de Lara Slanzi",
-            "Inglés": "Photo portrait of Lara Slanzi",
+            "Spanish": "Foto retrato de Lara Slanzi",
+            "English": "Photo portrait of Lara Slanzi",
         },
         "email": {"Ibiza": "lara@ibizavende.com", "Madrid": "lara@madridvende.com"},
         "tel_1": "636",
@@ -280,12 +288,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
     {
-        "nombre": "mariaclara",
-        "Persona_y_título": "Maria Clara Torres, Sales and Rentals",
+        "nombre": "María Clara",
+        "Persona_y_título": "María Clara Torres, Sales and Rentals",
+        "sedes": ["Ibiza"],
         "nombre_foto": "firma_mariaclara.jpg",
         "alt_foto": {
-            "Español": "Foto retrato de Maria Clara Torres",
-            "Inglés": "Photo portrait of Maria Clara Torres",
+            "Spanish": "Foto retrato de Maria Clara Torres",
+            "English": "Photo portrait of Maria Clara Torres",
         },
         "email": {
             "Ibiza": "mariaclara@ibizavende.com",
@@ -299,12 +308,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
     {
-        "nombre": "joaquin",
+        "nombre": "Joaquín",
         "Persona_y_título": "Joaquín Marí Marrodan, Sales and Rentals Manager",
-        "nombre_foto": "firma_joaquin.jpg",
+        "sedes": ["Ibiza"],
+        "nombre_foto": "firma_joaquin_v3.png",
         "alt_foto": {
-            "Español": "Foto retrato de Joaquín Marí Marrodan",
-            "Inglés": "Photo portrait of Joaquín Marí Marrodan",
+            "Spanish": "Foto retrato de Joaquín Marí Marrodan",
+            "English": "Photo portrait of Joaquín Marí Marrodan",
         },
         "email": {"Ibiza": "jmari@ibizavende.com", "Madrid": "jmari@madridvende.com"},
         "tel_1": "639",
@@ -315,12 +325,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
     {
-        "nombre": "cristina",
+        "nombre": "Cristina",
         "Persona_y_título": "Cristina Santos, Sales and Rentals",
-        "nombre_foto": "firma_cristina.jpg",
+        "sedes": ["Ibiza"],
+        "nombre_foto": "firma_cristina_v3.png",
         "alt_foto": {
-            "Español": "Foto retrato de Cristina Santos",
-            "Inglés": "Photo portrait of Cristina Santos",
+            "Spanish": "Foto retrato de Cristina Santos",
+            "English": "Photo portrait of Cristina Santos",
         },
         "email": {
             "Ibiza": "cristina@ibizavende.com",
@@ -334,12 +345,13 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
     {
-        "nombre": "valentin",
-        "Persona_y_título": "Valentin Limousin, Junior Sales and Rentals",
-        "nombre_foto": "firma_valentin.jpg",
+        "nombre": "Valentín",
+        "Persona_y_título": "Valentín Limousin, Junior Sales and Rentals",
+        "sedes": ["Ibiza"],
+        "nombre_foto": "firma_valentin_v3.png",
         "alt_foto": {
-            "Español": "Foto retrato de Valentin Limousin",
-            "Inglés": "Photo portrait of Valentin Limousin",
+            "Spanish": "Foto retrato de Valentin Limousin",
+            "English": "Photo portrait of Valentin Limousin",
         },
         "email": {
             "Ibiza": "valentin@ibizavende.com",
@@ -353,21 +365,25 @@ personas = [
         "cerrar_comentario_html_fijo": {"Ibiza": "", "Madrid": ""},
     },
 ]
-idiomas = ["Español", "Inglés"]
+idiomas = ["Spanish", "English"]
 entornos = ["Mail", "Mobilia"]
 
 
-for ciudad in ciudades:
-    for persona in personas:
+for persona in personas:
+    firmas = []
+    nombre_para_paths = persona["nombre"].lower().replace(" ", "")
+    for ciudad in ciudades:
+        if ciudad not in persona["sedes"]:
+            continue
         for entorno in entornos:
             for idioma in idiomas:
-                filepath = persona["nombre"] + "/"
+                filepath = nombre_para_paths + "/"
                 filename = (
                     "_".join(
                         [
                             "firma",
                             ciudad.lower(),
-                            persona["nombre"],
+                            nombre_para_paths,
                             entorno.lower(),
                             idioma.lower(),
                         ]
@@ -424,3 +440,7 @@ for ciudad in ciudades:
                 output_file = Path(filepath + filename)
                 output_file.parent.mkdir(exist_ok=True, parents=True)
                 output_file.write_text(texto_formateado, encoding="UTF-8")
+
+                firmas.append(output_file)
+
+    enviar_email_a(persona["email"][ciudad], persona["nombre"], firmas)
